@@ -1,0 +1,8 @@
+package helloword;
+
+public class telephone {
+	int screenSize;
+	public void call(){
+		
+	}
+}

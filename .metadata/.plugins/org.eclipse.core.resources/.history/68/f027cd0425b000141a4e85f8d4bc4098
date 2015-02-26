@@ -1,0 +1,14 @@
+package com.imooc;
+
+public class Initial {
+
+	public Initial() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

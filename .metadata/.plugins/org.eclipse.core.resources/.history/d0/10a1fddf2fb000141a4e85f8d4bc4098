@@ -1,0 +1,9 @@
+package com.imooc;
+
+public abstract class Telephone {
+
+	public Telephone() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

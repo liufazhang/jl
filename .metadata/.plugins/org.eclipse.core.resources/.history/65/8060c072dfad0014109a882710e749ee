@@ -1,0 +1,17 @@
+package helloword;
+
+import java.util.Scanner;
+
+public class hello {
+	public static void main(String[] args) {
+		int classNum = 2;
+		int classMem =3;
+		Scanner input = new Scanner(System.in);
+		for(int i=0; i<classNum;i++){
+			for(int j=0;j<classMem;j++){
+				
+			}
+		}
+		
+	}
+}

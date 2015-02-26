@@ -1,0 +1,9 @@
+package com.imooc;
+
+public class Initial {
+
+	public Initial() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

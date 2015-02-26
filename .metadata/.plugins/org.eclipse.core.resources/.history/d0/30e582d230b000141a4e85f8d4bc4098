@@ -1,0 +1,17 @@
+package com.imooc;
+
+public class Initial {
+
+	public Initial() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Telephone tel1 = new CellPhone();
+		tel1.call();
+		Telephone tel2 = new SmartPhone();
+		tel2.call();
+	}
+
+}

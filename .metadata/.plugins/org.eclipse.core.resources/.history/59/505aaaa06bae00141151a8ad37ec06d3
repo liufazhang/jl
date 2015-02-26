@@ -1,0 +1,15 @@
+package project2;
+
+public class telephone {
+	float Screen;
+	float Cpu;
+	float Mem;
+	public telephone(){
+		System.out.println("·¬ÇÑ³´µ°");
+	}
+	
+	public telephone(float newScreen,float newCpu,float newMem){
+		
+	}
+		
+}

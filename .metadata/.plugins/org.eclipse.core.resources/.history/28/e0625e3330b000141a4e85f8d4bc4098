@@ -1,0 +1,9 @@
+package com.imooc;
+
+public class SmartPhone {
+
+	public SmartPhone() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

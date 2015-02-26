@@ -1,0 +1,8 @@
+package project2;
+
+public class telephone {
+
+		public telephone(){
+			System.out.println("·¬ÇÑ³´µ°");
+		}
+}
