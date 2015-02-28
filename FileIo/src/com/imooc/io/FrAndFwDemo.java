@@ -9,6 +9,9 @@ public class FrAndFwDemo {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
+		/*
+		 * FileReader FileWriter 不能指定编码
+		 */
 		FileReader fr = new FileReader("D:\\java\\FileIo\\src\\com\\imooc\\io\\IOUtil.java");
 		//FileWriter fw = new FileWriter("D:\\java\\FileIo\\demo\\fw.txt");
 		FileWriter fw = new FileWriter("D:\\java\\FileIo\\demo\\fw.txt",true);//append
