@@ -1,9 +1,0 @@
-package com.imooc;
-
-public class Animal {
-
-	public Animal() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
