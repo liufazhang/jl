@@ -1,5 +1,8 @@
 package com.bignerdranch.android.criminalIntent;
 
+import java.util.UUID;
+
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -14,6 +17,8 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 
 public class CrimeFragment extends Fragment {
+	public static final String EXTRA_CRIME_ID = 
+			"com.bignedranch.android.criminalIntent.crie_id";
 	private Crime mCrime;
 	private EditText mTitleField;
 	private Button mDateButton;
@@ -29,8 +34,12 @@ public class CrimeFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		//UUID crimeId =(UUID)getActivity().getIntent().getSerializableExtra(EXTRA_CRIME_ID);
+		UUID crimeId = (UUID)getArguments().getSerializable(EXTRA_CRIME_ID);
+		mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
 		View v = inflater.inflate(R.layout.fragment_crime, container,false);
 		mTitleField = (EditText)v.findViewById(R.id.crime_title);
+		mTitleField.setText(mCrime.getTitle());
 		mDateButton = (Button)v.findViewById(R.id.crime_date);
 		//mDateButton.setText(mCrime.getDate().toString());
 		mDateButton.setText(mCrime.getDateFormat("d. MMMM"));		
@@ -57,6 +66,7 @@ public class CrimeFragment extends Fragment {
 		});
 		
 		mSolvedCheckBox = (CheckBox)v.findViewById(R.id.crime_solved);
+		mSolvedCheckBox.setChecked(mCrime.isSolved());
 		mSolvedCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {	
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				mCrime.setSolved(isChecked);
@@ -65,4 +75,17 @@ public class CrimeFragment extends Fragment {
 		});
 		return v;
 	}
+	
+	public static CrimeFragment newInstance(UUID crimeId){
+		Bundle args = new Bundle();
+		args.putSerializable(EXTRA_CRIME_ID, crimeId);
+		CrimeFragment fragment = new CrimeFragment();
+		fragment.setArguments(args);
+		return fragment;
+	}
+	
+	public void returnResult(){
+		getActivity().setResult(Activity.RESULT_OK, null);
+	}
+	
 }

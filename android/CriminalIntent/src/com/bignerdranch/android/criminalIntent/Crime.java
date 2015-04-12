@@ -43,4 +43,10 @@ public class Crime {
 		mSolved = solved;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return mTitle;
+	}
+	
 }
