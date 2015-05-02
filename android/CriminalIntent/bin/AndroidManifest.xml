@@ -17,7 +17,7 @@
             android:name="com.bignerdranch.android.criminalIntent.CrimePagerActivity"
             android:label="@string/app_name">          
            
-        </activity>y
+        </activity>
        
         <activity
             android:name=".CrimeListActivity">
